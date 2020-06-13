@@ -135,7 +135,9 @@ func TestUser(t *testing.T) {
 		if err != nil {
 			t.Error(err)
 		}
-		t.Logf("%v\n", l.Roles)
+		if l != nil {
+			t.Logf("%v\n", l.Roles)
+		}
 	})
 
 	t.Run("AssignRoles", func(t *testing.T) {
